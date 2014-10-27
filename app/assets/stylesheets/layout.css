@@ -1,0 +1,80 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+div#top {
+    background: #f0f9ff;
+    background: -moz-linear-gradient(top,  #f0f9ff 0%, #cbebff 47%, #d1eeff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f9ff), color-stop(47%,#cbebff), color-stop(100%,#d1eeff));
+    background: -webkit-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#d1eeff 100%);
+    background: -o-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#d1eeff 100%);
+    background: -ms-linear-gradient(top,  #f0f9ff 0%,#cbebff 47%,#d1eeff 100%);
+    background: linear-gradient(to bottom,  #f0f9ff 0%,#cbebff 47%,#d1eeff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#d1eeff',GradientType=0 );
+
+    height: 70px;
+    line-height: 70px;
+    border-bottom: solid 2px #7dc6ff;
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+p#logo_name {
+    height: inherit;
+    color: #619cff;
+    font-size: 45px;
+    vertical-align: middle;
+    float: left;
+}
+
+#top #user {
+    margin: auto 0px;
+    height: inherit;
+    width: 270px;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(255,255,255,0.6);
+    padding-left: 10px;
+
+    border-radius: 8px;
+    border: solid #f5f5f5 2px;
+}
+
+
+#user a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow:0 1px black;
+    position:relative;
+    background-color: #4471a9;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(top, #5884BC, #395e8d);
+    box-shadow:0px 5px 0px #223955, 0px 8px 5px rgba(0,0,0,0.3);
+}
+#user a:hover {
+    text-decoration: none;
+    top: 3px;
+    background-color:#395e8d;
+    box-shadow:0px 2px 0px #223955, 0px 4px 3px rgba(0,0,0,0.3);
+}
+
+
+
+body, html{
+    width: 100%;
+    height: 100%;
+    background: #feffff;
+    background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #ddf1f9 45%, #dae2e5 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#feffff), color-stop(45%,#ddf1f9), color-stop(100%,#dae2e5));
+    background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 45%,#dae2e5 100%);
+    background: -o-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 45%,#dae2e5 100%);
+    background: -ms-radial-gradient(center, ellipse cover,  #feffff 0%,#ddf1f9 45%,#dae2e5 100%);
+    background: radial-gradient(ellipse at center,  #feffff 0%,#ddf1f9 45%,#dae2e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#dae2e5',GradientType=1 );
+
+
+}
+

@@ -1,0 +1,28 @@
+// Place all the styles related to the lists_manager controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#lists_container {
+  margin: 10px;
+}
+
+#list_container {
+  border-radius: 8px 8px 2px 2px;
+  height: 340px;
+  width: 220px;
+  background-color: green;
+}
+
+#list_container p#list_name{
+  height: 46px;
+}
+
+#list_container #done {
+  height: 147px;
+  background-color: blue;
+}
+
+#list_container #not_done {
+  background-color: red;
+  height: 147px;
+}

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <title>EngLists</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
+
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<div id="top">
+  <p id="logo_name">EngList</p>
+  <% if user_signed_in? %>
+    <div id="user">
+      Welcome, <%= current_user.name %>
+      <%= link_to 'Sign off', destroy_user_session_path,  :method => :delete %>
+    </div>
+  <% end %>
+
+</div>
+
 <%= yield %>
 
 </body>
