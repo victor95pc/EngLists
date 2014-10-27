@@ -5,21 +5,36 @@ class TasksControllerTest < ActionController::TestCase
     @task = tasks(:one)
   end
 
-  test "should create task" do
-    assert_response :success do
-      post :create, task: { description: @task.description, list: @task.list, status: @task.status }
-    end
+  test "should not create task if it is not sign in" do
+    crud_test_task :create, @task
+    assert_response :redirect
   end
 
-  test "should update task" do
-    assert_response :success do
-      patch :update, id: @task, task: { description: @task.description, list: @task.list, status: false }
-    end
+  test "should not update task if it is not sign in" do
+    crud_test_task :update, @task
+    assert_response :redirect
   end
 
-  test "should destroy task" do
-    assert_response :success do
-      delete :destroy, id: @task
-    end
+  test "should not destroy task if it is not sign in" do
+    crud_test_task :destroy, @task
+    assert_response :redirect
+  end
+
+  test "should create task if it is sign in" do
+    sign_in users(:victor)
+    crud_test_task :create, @task
+    assert_response :success
+  end
+
+  test "should update task if it is sign in" do
+    sign_in users(:victor)
+    crud_test_task :update, @task
+    assert_response :success
+  end
+
+  test "should destroy task if it is sign in" do
+    sign_in users(:victor)
+    crud_test_task :destroy, @task
+    assert_response :success
   end
 end

@@ -5,9 +5,8 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-
     if @task.save
-      render status: :created
+      render status: :created, nothing: true
     else
       render json: @task.errors, status: :unprocessable_entity
     end
@@ -15,15 +14,15 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      render status: :accepted
+      render status: :accepted, nothing: true
     else
       render json: @task.errors, status: :unprocessable_entity
     end
   end
 
   def destroy
-    if @task.destroyed?
-      render status: :accepted
+    if @task.destroy!
+      render status: :accepted, nothing: true
     else
       render json: @task.errors, status: :unprocessable_entity
     end
