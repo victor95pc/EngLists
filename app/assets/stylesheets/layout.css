@@ -1,7 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+#help_guide {
+    position: absolute;
+    top: -20px;
+    right: 42%;
+    width: 250px;
+
+    height: inherit;
+    float: right;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(254,254,254,0.6);
+    padding-left: 10px;
+
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: solid #f5f5f5 2px;
+}
+
 div#top {
+    min-width: 900px;
     background: #f0f9ff;
     background: -moz-linear-gradient(top,  #f0f9ff 0%, #cbebff 47%, #d1eeff 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f9ff), color-stop(47%,#cbebff), color-stop(100%,#d1eeff));
@@ -20,6 +38,11 @@ div#top {
 
 }
 
+p#user_name {
+    float: left;
+    width: 210px;
+}
+
 p#logo_name {
     height: inherit;
     color: #619cff;
@@ -31,10 +54,10 @@ p#logo_name {
 #top #user {
     margin: auto 0px;
     height: inherit;
-    width: 270px;
+    width: 300px;
     float: right;
     font-family: 'Lato', sans-serif;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(254,254,254,0.6);
     padding-left: 10px;
 
     border-radius: 8px;
@@ -43,24 +66,44 @@ p#logo_name {
 
 
 #user a {
-    text-decoration: none;
-    color: #ffffff;
-    text-shadow:0 1px black;
-    position:relative;
-    background-color: #4471a9;
-    padding: 5px 15px;
-    border: 0;
-    border-radius: 5px;
-    background-image: -webkit-linear-gradient(top, #5884BC, #395e8d);
-    box-shadow:0px 5px 0px #223955, 0px 8px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow:inset 0px 0px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 0px 0px 0px #ffffff;
+    box-shadow:inset 0px 0px 0px 0px #ffffff;
+    background-color:#ededed;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    text-indent:0;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#0099ff;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:40px;
+    line-height:40px;
+    width:80px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 0px #ffffff;
 }
 #user a:hover {
-    text-decoration: none;
-    top: 3px;
-    background-color:#395e8d;
-    box-shadow:0px 2px 0px #223955, 0px 4px 3px rgba(0,0,0,0.3);
+    background-color:#e6e6e6;
 }
 
+#user a:active {
+    position:relative;
+    top:1px;
+}
 
 
 body, html{

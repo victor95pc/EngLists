@@ -16,8 +16,8 @@ class ActiveSupport::TestCase
 
   def crud_test_task(method, task)
     case method
-      when :create  ; post :create, task: { description: task.description, list: task.list, status: task.status }
-      when :update  ; patch :update, id: task, task: { description: task.description, list: task.list, status: false }
+      when :create  ; post :create, task: { description: task.description, list_id: task.list.id, status: task.status }
+      when :update  ; patch :update, id: task, task: { description: task.description, list_id: task.list.id, status: false }
       when :destroy ; delete :destroy, id: task
 
       else raise Exception 'method not found'
@@ -26,8 +26,8 @@ class ActiveSupport::TestCase
 
   def crud_test_list(method, list)
     case method
-      when :create  ; post :create, list: { name: list.name, user: list.user }
-      when :update  ; patch :update, id: list, list: { name: list.name, user: list.user }
+      when :create  ; post :create, list: { name: list.name, user_id: list.user.id }
+      when :update  ; patch :update, id: list, list: { name: list.name, user_id: list.user.id }
       when :destroy ; delete :destroy, id: list
 
       else raise Exception 'method not found'

@@ -1,3 +1,39 @@
+<div id="buttons">
+  <%= image_tag('add.png', alt:'add', id: 'add_list') %>
 
+</div>
+
+<div id="lists_container">
+  <% @lists.each do |list| %>
+      <div id="<%=list.id%>" class="list_container">
+
+        <div id="top_list">
+          <input type="text" id="list_name" value="<%= list.name %>"/>
+          <%= image_tag('add.png', alt:'add', id: 'add_task', class: 'add_task') %>
+          <%= delete_list list.id %>
+        </div>
+
+
+        <div id="Default" class="contentHolder">
+          <div id="done">
+            <%= show_tasks_descriptions @tasks[:done][list] %>
+          </div>
+        </div>
+
+
+        <div id="undone_task">
+          Not Done
+        </div>
+
+        <div id="Default" class="contentHolder">
+          <div id="not_done">
+            <%= show_tasks_descriptions @tasks[:not_done][list] %>
+          </div>
+        </div>
+
+      </div>
+
+  <% end %>
+</div>
 
 

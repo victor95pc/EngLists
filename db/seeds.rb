@@ -6,8 +6,32 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(
+victor = User.create!(
 name: 'Victor',
-email: 'newtest@test.com',
+email: 'victorpalomocastro@gmail.com',
 password: 12345678
-);
+)
+
+victor_list = List.create!(
+    user: victor,
+    name: 'New List'
+)
+
+Task.create!(
+    description: 'test1',
+    status: true,
+    list: victor_list
+)
+
+Task.create!(
+    description: 'test2',
+    status: true,
+    list: victor_list
+)
+
+Task.create!(
+    description: 'test3',
+    status: false,
+    list: victor_list
+)
+

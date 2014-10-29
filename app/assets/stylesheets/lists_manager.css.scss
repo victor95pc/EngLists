@@ -6,23 +6,145 @@
   margin: 10px;
 }
 
-#list_container {
-  border-radius: 8px 8px 2px 2px;
-  height: 340px;
-  width: 220px;
-  background-color: green;
+.contentHolder { position:relative; margin:0px auto; padding:0px; width: 300px; height: 125px; overflow: hidden; }
+
+#lists_container * {
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
-#list_container p#list_name{
+#undone_task {
+  border: none 2px #2a6496;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  padding: 10px 5px;
+  font-size: 16px;
+  background: transparent;
+  color: #285e8e;
+
+}
+ul li#task {
+  padding: 10px 0;
+}
+
+ul li#task:nth-child(even) {
+  width: inherit;
+  background-color: #DCEEF8;
+}
+
+ul li#task:nth-child(odd) {
+  width: inherit;
+  background-color: transparent;
+}
+
+ul li#task input {
+  margin-left: 5px;
+  font-size: 15px;
+  width: 175px;
+  color: #285e8e;
+}
+
+ul li a {
+  float: right;
+  vertical-align: middle;
+}
+
+
+#lists_container ul li a {
+  margin: 0px 1px;
+  font-size: 13px;
+  color: #6496c8;
+  padding: 4px;
+  background: transparent;
+  border: solid 2px #6496c8;
+  border-radius: 10px;
+}
+ul li a:hover {
+  border-color: #346392;
+  color: #346392;
+}
+ul li a:active {
+  border-color: #27496d;
+  color: #27496d;
+}
+
+
+
+#top_list {
+  border: none 2px #2a6496;
+  border-bottom-style: solid;
+}
+
+#top_list input {
+  border-radius: 7px 7px 7px 7px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #285e8e;
+  max-width: 230px;
+  font-size: 20px;
+
+}
+
+.list_container {
+  background: #eeeeee;
+  background: -moz-radial-gradient(center, ellipse cover,  #eeeeee 0%, #eeeeee 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee));
+  background: -webkit-radial-gradient(center, ellipse cover,  #eeeeee 0%,#eeeeee 100%);
+  background: -o-radial-gradient(center, ellipse cover,  #eeeeee 0%,#eeeeee 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  #eeeeee 0%,#eeeeee 100%);
+  background: radial-gradient(ellipse at center,  #eeeeee 0%,#eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 );
+
+
+  -webkit-box-shadow: 0 0 10px 1px #000000;
+  box-shadow: 0 0 10px 1px #000000;
+
+
+
+  border-radius: 7px 7px 7px 7px;
+  height: 340px;
+  width: 300px;
+  background-color: green;
+  float: left;
+  margin: 30px;
+}
+
+.list_container #list_name{
   height: 46px;
 }
 
-#list_container #done {
-  height: 147px;
-  background-color: blue;
+.list_container #not_done, .list_container #done {
+  height: 125px;
+  position: relative;
+  overflow:hidden;
 }
 
-#list_container #not_done {
-  background-color: red;
-  height: 147px;
+#add_list {
+  margin-left: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.add_task, .delete_icon {
+  width: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+  float: right;
+}
+
+#buttons {
+  float: right;
+}
+
+.change, .delete {
+  text-decoration: none;
+  color: #000000;
+}
+
+.change:hover, .delete:hover {
+  text-decoration: none;
+  cursor: pointer;
 }

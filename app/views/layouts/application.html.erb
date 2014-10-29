@@ -12,11 +12,13 @@
 
 <div id="top">
   <p id="logo_name">EngList</p>
+
   <% if user_signed_in? %>
-    <div id="user">
-      Welcome, <%= current_user.name %>
-      <%= link_to 'Sign off', destroy_user_session_path,  :method => :delete %>
-    </div>
+      <p id="help_guide">Press Enter to save something ; )</p>
+      <div id="user" data-user="<%=current_user.id%>">
+        <p id="user_name">Welcome, <%= truncate(current_user.name, length: 14) %></p>
+        <%= link_to 'Sign off', destroy_user_session_path,  :method => :delete %>
+      </div>
   <% end %>
 
 </div>

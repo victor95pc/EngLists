@@ -4,4 +4,8 @@ class List < ActiveRecord::Base
 
   validates_presence_of :name
   validates_associated :user
+
+  def self.get_lists(user)
+    List.where(user: user).eager_load(:tasks)
+  end
 end
